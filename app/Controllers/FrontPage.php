@@ -8,7 +8,7 @@ use Psr\Log\LoggerInterface;
 
 class FrontPage extends BaseController {
 
-   protected $env = 'production';
+   protected $env = 'development';
 
    public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger) {
       parent::initController($request, $response, $logger);

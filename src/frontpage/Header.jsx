@@ -12,7 +12,7 @@ const Header = () => {
          <ReactNotificationsComponent />
          <ModalLogin openModalLogin={openModalLogin} setOpenModalLogin={(e) => setOpenModalLogin(e)} />
          <a id="logo" href="/">
-            <img src="/assets/frontpage/img/logo.png" width="125" height="40" alt="Atena" data-retina="true" />
+            <img src="/assets/images/home_page_logo.png" width="125" height="40" alt="Atena" data-retina="true" />
          </a>
          <nav id="top-nav">
             <ul>
