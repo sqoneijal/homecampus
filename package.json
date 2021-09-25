@@ -1,0 +1,39 @@
+{
+   "name": "homecampus",
+   "version": "1.0.0",
+   "description": "",
+   "main": "webpack.config.js",
+   "scripts": {
+      "admin": "webpack serve --env NODE_ENV=development --env PAGE=admin --mode development",
+      "build-admin": "webpack --env NODE_ENV=production --env PAGE=admin --mode production",
+      "translator": "webpack serve --env NODE_ENV=development --env PAGE=translator --mode development",
+      "build-translator": "webpack --env NODE_ENV=production --env PAGE=translator --mode production",
+      "editor": "webpack serve --env NODE_ENV=development --env PAGE=editor --mode development",
+      "build-editor": "webpack --env NODE_ENV=production --env PAGE=editor --mode production",
+      "frontpage": "webpack serve --env NODE_ENV=development --env PAGE=frontpage --mode development",
+      "build-frontpage": "webpack --env NODE_ENV=production --env PAGE=frontpage --mode production"
+   },
+   "keywords": [],
+   "author": "sqone.developer@gmail.com",
+   "license": "ISC",
+   "dependencies": {
+      "axios": "^0.21.1",
+      "babel-loader": "^8.2.2",
+      "html-react-parser": "^1.2.8",
+      "react-notifications-component": "^3.1.0"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.15.4",
+      "@babel/preset-env": "^7.15.4",
+      "@babel/preset-react": "^7.14.5",
+      "clean-webpack-plugin": "^4.0.0",
+      "html-webpack-plugin": "^5.3.2",
+      "react": "^17.0.2",
+      "react-bootstrap": "^1.6.1",
+      "react-dom": "^17.0.2",
+      "webpack": "^5.52.0",
+      "webpack-cli": "^4.8.0",
+      "webpack-dev-server": "^4.1.0",
+      "webpack-manifest-plugin": "^4.0.2"
+   }
+}
