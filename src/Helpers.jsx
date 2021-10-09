@@ -4,7 +4,7 @@ import { store } from "react-notifications-component";
 export const post = (url, form = [], config = {}) => {
    let formData = new FormData();
 
-   // formData.append("user_modified", window.user.username);
+   formData.append("user_modified", window.user.username);
    Object.keys(form).map((data) => {
       formData.append(data, form[data]);
    });

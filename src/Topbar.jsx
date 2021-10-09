@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 
-const Topbar = () => {
-   // bool
-   const [openModalPilihProdi, setOpenModalPilihProdi] = useState(false);
+const profile_link = {
+   1: "/admin/profile",
+   2: "/editor/profile",
+   3: "/translator/profile",
+};
 
+const Topbar = () => {
    useEffect(() => {
       $("#vertical-menu-btn").on("click", function (e) {
          e.preventDefault();
@@ -48,7 +51,7 @@ const Topbar = () => {
                      <i className="mdi mdi-chevron-down d-none d-xl-inline-block" />
                   </button>
                   <div className="dropdown-menu dropdown-menu-end">
-                     <a className="dropdown-item" href="#">
+                     <a className="dropdown-item" href={profile_link[user.role]}>
                         <i className="ri-user-line align-middle me-1" /> Profile
                      </a>
                      <a className="dropdown-item text-danger" href="/login/logout">

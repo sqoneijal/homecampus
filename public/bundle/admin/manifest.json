@@ -1,11 +1,12 @@
 {
-  "topbar.js": "autotopbar.921baa68f9d8bb506ad1.js",
-  "navigation.js": "autonavigation.921baa68f9d8bb506ad1.js",
-  "dashboard.js": "autodashboard.921baa68f9d8bb506ad1.js",
-  "akun.js": "autoakun.921baa68f9d8bb506ad1.js",
-  "tingkatan.js": "autotingkatan.921baa68f9d8bb506ad1.js",
-  "bab.js": "autobab.921baa68f9d8bb506ad1.js",
-  "judul.js": "autojudul.921baa68f9d8bb506ad1.js",
-  "vendor.js": "autovendor.921baa68f9d8bb506ad1.js",
+  "topbar.js": "autotopbar.b63329ef1eeba8648b8c.js",
+  "navigation.js": "autonavigation.b63329ef1eeba8648b8c.js",
+  "dashboard.js": "autodashboard.b63329ef1eeba8648b8c.js",
+  "akun.js": "autoakun.b63329ef1eeba8648b8c.js",
+  "tingkatan.js": "autotingkatan.b63329ef1eeba8648b8c.js",
+  "bab.js": "autobab.b63329ef1eeba8648b8c.js",
+  "judul.js": "autojudul.b63329ef1eeba8648b8c.js",
+  "profile.js": "autoprofile.b63329ef1eeba8648b8c.js",
+  "vendor.js": "autovendor.b63329ef1eeba8648b8c.js",
   "index.html": "autoindex.html"
 }

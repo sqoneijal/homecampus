@@ -58,6 +58,9 @@ class Admin extends BaseController {
                $response[$field] = trim($data[$field]);
             }
          }
+
+         $response['avatar_file'] = $data['avatar'];
+
          return $response;
       } catch (\Exeption $e) {
          die($e->getMessage());

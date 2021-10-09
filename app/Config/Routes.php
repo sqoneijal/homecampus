@@ -106,6 +106,12 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
 		$routes->post('hapus', 'Judul::hapus');
 		$routes->post('getbab', 'Judul::getBAB');
 	});
+
+	$routes->group('profile', function($routes) {
+		$routes->get('/', 'Profile::index');
+
+		$routes->post('submit', 'Profile::submit');
+	});
 });
 
 $routes->group('translator', ['namespace' => 'App\Controllers\Translator'], function($routes) {

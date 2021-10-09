@@ -13,6 +13,7 @@ const entry = {
       tingkatan: "./src/admin/tingkatan/Lists.jsx",
       bab: "./src/admin/bab/Lists.jsx",
       judul: "./src/admin/judul/Lists.jsx",
+      profile: "./src/admin/profile/Forms.jsx",
    },
    translator: {
       topbar: "./src/Topbar.jsx",
