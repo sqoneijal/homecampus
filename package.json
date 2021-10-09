@@ -11,7 +11,9 @@
       "editor": "webpack serve --env NODE_ENV=development --env PAGE=editor --mode development",
       "build-editor": "webpack --env NODE_ENV=production --env PAGE=editor --mode production",
       "frontpage": "webpack serve --env NODE_ENV=development --env PAGE=frontpage --mode development",
-      "build-frontpage": "webpack --env NODE_ENV=production --env PAGE=frontpage --mode production"
+      "build-frontpage": "webpack --env NODE_ENV=production --env PAGE=frontpage --mode production",
+      "login": "webpack serve --env NODE_ENV=development --env PAGE=login --mode development",
+      "build-login": "webpack --env NODE_ENV=production --env PAGE=login --mode production"
    },
    "keywords": [],
    "author": "sqone.developer@gmail.com",

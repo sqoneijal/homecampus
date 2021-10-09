@@ -33,6 +33,9 @@ const entry = {
       tingkatan: "./src/frontpage/tingkatan/Lists.jsx",
       judul: "./src/frontpage/judul/Lists.jsx",
    },
+   login: {
+      login: "./src/Login.jsx",
+   },
 };
 
 const build = {
@@ -40,6 +43,7 @@ const build = {
    translator: "public/bundle/translator",
    editor: "public/bundle/editor",
    frontpage: "public/bundle/frontpage",
+   login: "public/bundle/login",
 };
 
 module.exports = (env) => {
