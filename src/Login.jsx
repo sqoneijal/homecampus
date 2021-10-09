@@ -86,6 +86,7 @@ const Login = () => {
                                              onChange={(e) => setUsername(e.target.value)}
                                              id="username"
                                              placeholder="Masukkan username"
+                                             autoFocus={true}
                                           />
                                        </div>
                                        <div className="mb-3 auth-form-group-custom mb-4">
