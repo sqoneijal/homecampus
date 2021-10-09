@@ -31,8 +31,7 @@ const entry = {
       navigation: "./src/frontpage/Navigation.jsx",
       home: "./src/frontpage/Home.jsx",
       tingkatan: "./src/frontpage/tingkatan/Lists.jsx",
-      bab: "./src/frontpage/tingkatan/bab/Lists.jsx",
-      judul: "./src/frontpage/tingkatan/bab/judul/Lists.jsx",
+      judul: "./src/frontpage/judul/Lists.jsx",
    },
 };
 

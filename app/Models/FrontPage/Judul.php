@@ -38,7 +38,7 @@ class Judul extends Model {
       }
    }
 
-   public function getDetail($id_judul) {
+   public function getDetailJudul($id_judul) {
       try {
          $table = $this->db->table('tb_judul tj');
          $table->where('tj.id', $id_judul);

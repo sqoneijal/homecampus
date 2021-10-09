@@ -1,39 +1,17 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { get, notification } from "../Helpers";
-import ReactNotification from "react-notifications-component";
+import { Container } from "react-bootstrap";
 
 const Navigation = () => {
    // array
    const [daftarTingkatan, setDaftarTingkatan] = useState([]);
-
-   // object
-   const [daftarBAB, setDaftarBAB] = useState([]);
-
-   // string
-   const [id_tingkatan, setId_tingkatan] = useState("");
 
    const getTingkatan = () => {
       get("/navigation/gettingkatan")
          .then((res) => {
             const { data } = res;
             setDaftarTingkatan(data);
-            getBAB();
-         })
-         .catch((e) => {
-            if (typeof e.response.data.message !== "undefined") {
-               notification(false, e.response.data.message);
-            } else {
-               notification(false, e.response.statusText);
-            }
-         });
-   };
-
-   const getBAB = () => {
-      get("/navigation/getbab")
-         .then((res) => {
-            const { data } = res;
-            setDaftarBAB(data);
          })
          .catch((e) => {
             if (typeof e.response.data.message !== "undefined") {
@@ -50,65 +28,23 @@ const Navigation = () => {
    }, []);
 
    return (
-      <React.Fragment>
-         <ReactNotification />
-         <ul className="side-nav-menu">
-            {daftarTingkatan.map((data, key) => {
-               return (
-                  <li key={key} className={typeof daftarBAB[data.id] !== "undefined" ? "item-has-children" : ""}>
-                     <a
-                        href={typeof daftarBAB[data.id] !== "undefined" ? "#" : "/tingkatan/" + data.id}
-                        className={id_tingkatan === data.id ? "submenu-open" : ""}
-                        onClick={(e) => {
-                           if (typeof daftarBAB[data.id] !== "undefined") {
-                              setId_tingkatan(data.id);
-                           }
-                        }}
-                     >
-                        {data.nama}
-                     </a>
-                     {typeof daftarBAB[data.id] !== "undefined" ? (
-                        <ul className="sub-menu" style={{ display: data.id === id_tingkatan ? "block" : "none" }}>
-                           {daftarBAB[data.id].map((a, b) => {
-                              return (
-                                 <li key={b}>
-                                    <a href={"/tingkatan/" + a.id_tingkatan + "/bab/" + a.id}>{a.nama}</a>
-                                 </li>
-                              );
-                           })}
-                        </ul>
-                     ) : (
-                        <></>
-                     )}
-                  </li>
-               );
-            })}
-         </ul>
-         <div id="social">
-            <ul>
-               <li>
-                  <a href="#">
-                     <i className="icon-facebook"></i>
-                  </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <i className="icon-twitter"></i>
-                  </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <i className="icon-google"></i>
-                  </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <i className="icon-linkedin"></i>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </React.Fragment>
+      <Container fluid={true}>
+         <nav className="navbar navbar-light navbar-expand-lg topnav-menu">
+            <div className="collapse navbar-collapse" id="topnav-menu-content">
+               <ul className="navbar-nav">
+                  {daftarTingkatan.map((data, key) => {
+                     return (
+                        <li className="nav-item" key={key}>
+                           <a href={`/tingkatan/${data.id}`} className="nav-link" role="button" id={`topnav-${data.id}`}>
+                              {data.nama}
+                           </a>
+                        </li>
+                     );
+                  })}
+               </ul>
+            </div>
+         </nav>
+      </Container>
    );
 };
-ReactDOM.render(<Navigation />, document.getElementById("side-nav"));
+ReactDOM.render(<Navigation />, document.getElementById("navigation"));

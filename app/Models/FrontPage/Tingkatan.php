@@ -12,6 +12,27 @@ class Tingkatan extends Model {
       $this->db = \Config\Database::connect();
    }
 
+   public function getJudul() {
+      try {
+         $table = $this->db->table('tb_judul');
+         $table->orderBy('nama');
+
+         $get = $table->get();
+         $result = $get->getResultArray();
+
+         $response = [];
+         foreach ($result as $data) {
+            $response[$data['id_bab']][] = [
+               'id' => $data['id'],
+               'nama' => $data['nama']
+            ];
+         }
+         return $response;
+      } catch (\Exception $e) {
+         die($e->getMessage());
+      }
+   }
+
    public function getBAB($id_tingkatan) {
       try {
          $table = $this->db->table('tb_bab tb');

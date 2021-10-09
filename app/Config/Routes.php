@@ -38,24 +38,19 @@ $routes->group('tingkatan', function($routes) {
 	$routes->get('(:num)', 'Tingkatan::index/$1');
 	$routes->get('getdetail/(:num)', 'Tingkatan::getDetail/$1');
 	$routes->get('getbab/(:num)', 'Tingkatan::getBAB/$1');
+	$routes->get('getjudul', 'Tingkatan::getJudul');
 
 	$routes->group('(:num)', function($routes) {
 		$routes->group('bab', function($routes) {
 			$routes->get('(:num)', 'BAB::index/$1');
-
-			$routes->post('getdetail', 'BAB::getDetail');
-			$routes->post('getdaftarjudul', 'BAB::getDaftarJudul');
-
-			$routes->group('(:num)', function($routes) {
-				$routes->group('judul', function($routes) {
-					$routes->get('(:num)', 'Judul::index/$1');
-
-					$routes->post('getdetail', 'Judul::getDetail');
-					$routes->post('getdaftarsoal', 'Judul::getDaftarSoal');
-				});
-			});
 		});
 	});
+});
+
+$routes->group('judul', function($routes) {
+	$routes->get('(:num)', 'Judul::index/$1');
+	$routes->get('getdetailjudul/(:num)', 'Judul::getDetailJudul/$1');
+	$routes->get('getdaftarsoal/(:num)', 'Judul::getDaftarSoal/$1');
 });
 
 $routes->group('navigation', function($routes) {

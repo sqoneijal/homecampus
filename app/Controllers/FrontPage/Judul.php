@@ -14,7 +14,7 @@ class Judul extends FrontPage {
       parent::initController($request, $response, $logger);
    }
 
-   public function index($id_bab) {
+   public function index($id_judul) {
       $this->data = [
          'title' => 'Judul'
       ];
@@ -22,15 +22,15 @@ class Judul extends FrontPage {
       $this->template($this->data, 'judul');
    }
 
-   public function getDetail() {
+   public function getDetailJudul($id_judul) {
       $model = new Model();
-      $content = $model->getDetail($this->post['id_judul']);
+      $content = $model->getDetailJudul($id_judul);
       return $this->response->setJSON($content);
    }
 
-   public function getDaftarSoal() {
+   public function getDaftarSoal($id_judul) {
       $model = new Model();
-      $content = $model->getDaftarSoal($this->post['id_judul']);
+      $content = $model->getDaftarSoal($id_judul);
       return $this->response->setJSON($content);
    }
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta content="Belajar matematika SD/SMP online. Memecahkan masalah matematika tak terbatas untuk kelas 4, kelas 5 dan kelas 6 berdasarkan silabus Singapura. Pantau kemajuan Anda. Ikuti tes matematika." name="description" />
       <meta content="author" name="sqone.developer" />
-      <link rel="icon" href="/assets/frontpage/img/favicon.ico" />
+      <link rel="icon" href="/assets/images/favicon.ico" />
       <link rel="apple-touch-icon-precomposed" href="/assets/frontpage/img/apple-touch-icon.png"/>
       <?php
       echo @$internalCss;
@@ -30,7 +30,6 @@
          </div>
          <div class="main-content" id="root"></div>
       </div>
-      <div class="rightbar-overlay"></div>
       <?php
       echo "<script>";
       echo "var segment = {$segment}, content = {$footerJs}, user = {$users};";

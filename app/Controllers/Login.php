@@ -17,14 +17,14 @@ class Login extends BaseController {
    public function index() {
       $session = \Config\Services::session();
 
-      // $config = [
-      //    'is_login' => true,
-      //    'id_user' => '1',
-      //    'username' => 'admin',
-      //    'role' => '1'
-      // ];
-      // $session->set($config);
-      // return redirect()->to('/admin/dashboard');
+      $config = [
+         'is_login' => true,
+         'id_user' => '1',
+         'username' => 'admin',
+         'role' => '1'
+      ];
+      $session->set($config);
+      return redirect()->to('/admin/dashboard');
 
       $config = [
          'is_login' => true,

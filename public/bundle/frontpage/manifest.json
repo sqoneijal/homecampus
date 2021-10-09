@@ -1,10 +1,9 @@
 {
-  "header.js": "autoheader.e30243255bf1d9b4ecdf.js",
-  "navigation.js": "autonavigation.e30243255bf1d9b4ecdf.js",
-  "home.js": "autohome.e30243255bf1d9b4ecdf.js",
-  "tingkatan.js": "autotingkatan.e30243255bf1d9b4ecdf.js",
-  "bab.js": "autobab.e30243255bf1d9b4ecdf.js",
-  "judul.js": "autojudul.e30243255bf1d9b4ecdf.js",
-  "vendor.js": "autovendor.e30243255bf1d9b4ecdf.js",
+  "header.js": "autoheader.3b42a7a2d50bde507cb0.js",
+  "navigation.js": "autonavigation.3b42a7a2d50bde507cb0.js",
+  "home.js": "autohome.3b42a7a2d50bde507cb0.js",
+  "tingkatan.js": "autotingkatan.3b42a7a2d50bde507cb0.js",
+  "judul.js": "autojudul.3b42a7a2d50bde507cb0.js",
+  "vendor.js": "autovendor.3b42a7a2d50bde507cb0.js",
   "index.html": "autoindex.html"
 }

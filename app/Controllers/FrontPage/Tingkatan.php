@@ -34,4 +34,10 @@ class Tingkatan extends FrontPage {
       return $this->response->setJSON($content);
    }
 
+   public function getJudul() {
+      $model = new Model();
+      $content = $model->getJudul();
+      return $this->response->setJSON($content);
+   }
+
 }
