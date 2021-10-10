@@ -70,8 +70,8 @@ class Login extends BaseController {
             $set[$key] = str_replace('auto', '', $val);
          }
 
-         $script_tag[] = base_url("bundle/login/{$set['vendor.js']}");
-         $script_tag[] = base_url("bundle/login/{$set[$fileJs . '.js']}");
+         $script_tag[] = base_url("public/bundle/login/{$set['vendor.js']}");
+         $script_tag[] = base_url("public/bundle/login/{$set[$fileJs . '.js']}");
 
          return script_tag($script_tag);
       }

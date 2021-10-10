@@ -8,24 +8,24 @@ class Assets extends BaseConfig {
 
    public $datatable = [
       'css' => [
-         'assets/plugins/datatable/dataTables.bootstrap4.min.css',
-         'assets/plugins/datatable/responsive.bootstrap4.min.css',
+         'public/assets/plugins/datatable/dataTables.bootstrap4.min.css',
+         'public/assets/plugins/datatable/responsive.bootstrap4.min.css',
       ],
       'js' => [
-         'assets/plugins/datatable/jquery.dataTables.min.js',
-         'assets/plugins/datatable/dataTables.bootstrap4.min.js',
-         'assets/plugins/datatable/dataTables.responsive.min.js',
-         'assets/plugins/datatable/responsive.bootstrap4.min.js',
+         'public/assets/plugins/datatable/jquery.dataTables.min.js',
+         'public/assets/plugins/datatable/dataTables.bootstrap4.min.js',
+         'public/assets/plugins/datatable/dataTables.responsive.min.js',
+         'public/assets/plugins/datatable/responsive.bootstrap4.min.js',
       ]
    ];
 
    public $placeholder = [
-      'css' => ['assets/css/placeholder.min.css'],
+      'css' => ['public/assets/css/placeholder.min.css'],
    ];
 
    public $summernote = [
-      'css' => ['assets/plugins/summernote-0.8.18/summernote.min.css'],
-      'js' => ['assets/plugins/summernote-0.8.18/summernote.min.js']
+      'css' => ['public/assets/plugins/summernote-0.8.18/summernote.min.css'],
+      'js' => ['public/assets/plugins/summernote-0.8.18/summernote.min.js']
    ];
 
 }

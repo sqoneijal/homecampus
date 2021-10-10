@@ -86,10 +86,10 @@ class Admin extends BaseController {
             $set[$key] = str_replace('auto', '', $val);
          }
 
-         $script_tag[] = base_url("bundle/admin/{$set['vendor.js']}");
-         $script_tag[] = base_url("bundle/admin/{$set['topbar.js']}");
-         $script_tag[] = base_url("bundle/admin/{$set['navigation.js']}");
-         $script_tag[] = base_url("bundle/admin/{$set[$fileJs . '.js']}");
+         $script_tag[] = base_url("public/bundle/admin/{$set['vendor.js']}");
+         $script_tag[] = base_url("public/bundle/admin/{$set['topbar.js']}");
+         $script_tag[] = base_url("public/bundle/admin/{$set['navigation.js']}");
+         $script_tag[] = base_url("public/bundle/admin/{$set[$fileJs . '.js']}");
 
          return script_tag($script_tag);
       }
