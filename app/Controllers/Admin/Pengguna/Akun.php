@@ -77,7 +77,7 @@ class Akun extends Admin {
    
          $result = [];
          $result['detailContent'] = $data;
-         $result[] = '<img src="/assets/images/'.$data['avatar'].'" class="img-circle img-responsive" style="width: 30px; height: 30px;" />';
+         $result[] = '<img src="/public/assets/images/'.$data['avatar'].'" class="img-circle img-responsive" style="width: 30px; height: 30px;" />';
          $result[] = $data['nama'];
          $result[] = $data['username'];
          $result[] = $data['email'];

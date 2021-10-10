@@ -46,7 +46,7 @@ const Forms = () => {
             notification(data.status, data.msg_response);
 
             if (data.status) {
-               setAvatarImage("/assets/images/" + data.new_avatar);
+               setAvatarImage("/public/assets/images/" + data.new_avatar);
             }
          })
          .catch((e) => {

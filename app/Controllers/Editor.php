@@ -53,7 +53,7 @@ class Editor extends BaseController {
          $response = [];
          foreach ($fieldNames as $field) {
             if ($field === 'avatar') {
-               $response[$field] = base_url('assets/images/' . $data['avatar']);
+               $response[$field] = base_url('public/assets/images/' . $data['avatar']);
             } else {
                $response[$field] = trim($data[$field]);
             }
