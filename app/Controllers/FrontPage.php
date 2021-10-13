@@ -46,10 +46,10 @@ class FrontPage extends BaseController {
             $set[$key] = str_replace('auto', '', $val);
          }
 
-         $script_tag[] = base_url("public/bundle/frontpage/{$set['vendor.js']}");
-         $script_tag[] = base_url("public/bundle/frontpage/{$set['header.js']}");
-         $script_tag[] = base_url("public/bundle/frontpage/{$set['navigation.js']}");
-         $script_tag[] = base_url("public/bundle/frontpage/{$set[$fileJs . '.js']}");
+         $script_tag[] = base_url("bundle/frontpage/{$set['vendor.js']}");
+         $script_tag[] = base_url("bundle/frontpage/{$set['header.js']}");
+         $script_tag[] = base_url("bundle/frontpage/{$set['navigation.js']}");
+         $script_tag[] = base_url("bundle/frontpage/{$set[$fileJs . '.js']}");
 
          return script_tag($script_tag);
       }

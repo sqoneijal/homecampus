@@ -53,7 +53,7 @@ class Editor extends BaseController {
          $response = [];
          foreach ($fieldNames as $field) {
             if ($field === 'avatar') {
-               $response[$field] = base_url('public/assets/images/' . $data['avatar']);
+               $response[$field] = base_url('assets/images/' . $data['avatar']);
             } else {
                $response[$field] = trim($data[$field]);
             }
@@ -83,10 +83,10 @@ class Editor extends BaseController {
             $set[$key] = str_replace('auto', '', $val);
          }
 
-         $script_tag[] = base_url("public/bundle/editor/{$set['vendor.js']}");
-         $script_tag[] = base_url("public/bundle/editor/{$set['topbar.js']}");
-         $script_tag[] = base_url("public/bundle/editor/{$set['navigation.js']}");
-         $script_tag[] = base_url("public/bundle/editor/{$set[$fileJs . '.js']}");
+         $script_tag[] = base_url("bundle/editor/{$set['vendor.js']}");
+         $script_tag[] = base_url("bundle/editor/{$set['topbar.js']}");
+         $script_tag[] = base_url("bundle/editor/{$set['navigation.js']}");
+         $script_tag[] = base_url("bundle/editor/{$set[$fileJs . '.js']}");
 
          return script_tag($script_tag);
       }

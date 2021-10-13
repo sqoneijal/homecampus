@@ -51,7 +51,7 @@ class Translator extends BaseController {
          $response = [];
          foreach ($fieldNames as $field) {
             if ($field === 'avatar') {
-               $response[$field] = base_url('public/assets/images/' . $data['avatar']);
+               $response[$field] = base_url('assets/images/' . $data['avatar']);
             } else {
                $response[$field] = trim($data[$field]);
             }
@@ -81,10 +81,10 @@ class Translator extends BaseController {
             $set[$key] = str_replace('auto', '', $val);
          }
 
-         $script_tag[] = base_url("public/bundle/translator/{$set['vendor.js']}");
-         $script_tag[] = base_url("public/bundle/translator/{$set['topbar.js']}");
-         $script_tag[] = base_url("public/bundle/translator/{$set['navigation.js']}");
-         $script_tag[] = base_url("public/bundle/translator/{$set[$fileJs . '.js']}");
+         $script_tag[] = base_url("bundle/translator/{$set['vendor.js']}");
+         $script_tag[] = base_url("bundle/translator/{$set['topbar.js']}");
+         $script_tag[] = base_url("bundle/translator/{$set['navigation.js']}");
+         $script_tag[] = base_url("bundle/translator/{$set[$fileJs . '.js']}");
 
          return script_tag($script_tag);
       }
