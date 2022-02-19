@@ -5,6 +5,7 @@ import ReactNotification from "react-notifications-component";
 import ModalForms from "./ModalForms";
 import { post, notification } from "../../Helpers";
 import ModalDetail from "./ModalDetail";
+import Forms from "./Forms";
 
 let datatable;
 
@@ -13,6 +14,7 @@ const Lists = () => {
    const [openModalForms, setOpenModalForms] = useState(false);
    const [refreshTable, setRefreshTable] = useState(false);
    const [openModalDetail, setOpenModalDetail] = useState(false);
+   const [openForms, setOpenForms] = useState(false);
 
    // string
    const [pageType, setPageType] = useState("insert");
@@ -71,7 +73,7 @@ const Lists = () => {
                e.preventDefault();
                setDetailContent(data.detailContent);
                setPageType("update");
-               setOpenModalForms(true);
+               setOpenForms(true);
             };
 
             row.querySelector("#delete").onclick = (e) => {
@@ -115,6 +117,15 @@ const Lists = () => {
    return (
       <React.Fragment>
          <ReactNotification />
+         <Forms
+            openForms={openForms}
+            setOpenForms={(e) => setOpenForms(e)}
+            pageType={pageType}
+            setPageType={(e) => setPageType(e)}
+            setRefreshTable={(e) => setRefreshTable(e)}
+            detailContent={detailContent}
+            setDetailContent={(e) => setDetailContent(e)}
+         />
          <ModalForms
             openModalForms={openModalForms}
             setOpenModalForms={(e) => setOpenModalForms(e)}
@@ -171,7 +182,7 @@ const Lists = () => {
             <Container fluid={true}>
                <Row>
                   <Col md={6} sm={12}>
-                     <Button size="sm" active={true} className="waves-effect" onClick={() => setOpenModalForms(true)}>
+                     <Button size="sm" active={true} className="waves-effect" onClick={() => setOpenForms(true)}>
                         Tambah
                      </Button>
                   </Col>

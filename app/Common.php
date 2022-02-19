@@ -13,3 +13,9 @@
  *
  * @link: https://codeigniter4.github.io/CodeIgniter4/
  */
+
+define('tinymce', [
+   'js' => [
+      'assets/plugins/tinymce_5.10.2/tinymce.min.js'
+   ],
+]);

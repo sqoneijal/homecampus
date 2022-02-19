@@ -21,6 +21,7 @@
    "dependencies": {
       "axios": "^0.21.1",
       "babel-loader": "^8.2.2",
+      "decode-html": "^2.0.0",
       "html-react-parser": "^1.2.8",
       "react-notifications-component": "^3.1.0"
    },

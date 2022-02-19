@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, Button, Row, Col, Table } from "react-bootstrap";
-import parse from "html-react-parser";
+import decodeHtml from "decode-html";
+import HTMLReactParser from "html-react-parser";
 
 const ModalDetail = (props) => {
    const { openModalDetail, setOpenModalDetail, detailContent, setDetailContent } = props;
@@ -18,7 +19,7 @@ const ModalDetail = (props) => {
          <Modal.Body>
             <Row>
                <Col md={8} sm={12}>
-                  {parse(`${detailContent.content}`)}
+                  {HTMLReactParser(decodeHtml(`${detailContent.content}`))}
                </Col>
                <Col md={4} sm={12}>
                   <Table size="sm" hover responsive>

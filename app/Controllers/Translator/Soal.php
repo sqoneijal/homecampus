@@ -23,7 +23,7 @@ class Soal extends Translator {
             $this->assets->datatable['css'],
          ],
          'internalJs' => [
-            $this->assets->summernote['js'],
+            tinymce['js'],
             $this->assets->datatable['js'],
          ],
       ];
@@ -103,7 +103,7 @@ class Soal extends Translator {
             'id_soal' => $data['id_soal'],
             'id_judul' => $data['id_judul'],
             'nama' => $data['nama'],
-            'content' => html_entity_decode($data['content']),
+            'content' => $data['content'],
             'id_tingkatan' => $data['id_tingkatan'],
             'id_bab' => $data['id_bab'],
             'sub_bab' => $data['sub_bab'],
