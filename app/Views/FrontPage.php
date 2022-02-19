@@ -39,7 +39,7 @@
       'assets/js/bootstrap.bundle.min.js',
       'assets/js/waves.min.js',
       'assets/js/pace.min.js',
-      'https://themesdesign.in/nazox/layouts/assets/libs/masonry-layout/masonry.pkgd.min.js'
+      'assets/js/masonry.pkgd.min.js'
    ]);
    echo $webpack_js;
    echo '<script>window.Waves.init();</script>';

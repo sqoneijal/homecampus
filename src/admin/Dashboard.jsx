@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 
 const Dashboard = () => {
+   useEffect(() => {
+      var _Hasync = _Hasync || [];
+      _Hasync.push(["Histats.start", "1,4597034,4,400,120,90,00011111"]);
+      _Hasync.push(["Histats.fasi", "1"]);
+      _Hasync.push(["Histats.track_hits", ""]);
+      (function () {
+         var hs = document.createElement("script");
+         hs.type = "text/javascript";
+         hs.async = true;
+         hs.src = "//s10.histats.com/js15_as.js";
+         document.getElementById("hitstat").appendChild(hs);
+      })();
+      return () => {};
+   }, []);
+
    return (
       <React.Fragment>
          <div className="page-content">
@@ -19,6 +34,9 @@ const Dashboard = () => {
                         </div>
                      </div>
                   </Col>
+               </Row>
+               <Row>
+                  <Col xs={12} id="hitstat"></Col>
                </Row>
             </Container>
          </div>

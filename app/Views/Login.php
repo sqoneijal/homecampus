@@ -9,11 +9,11 @@
    <link rel="icon" href="/assets/images/favicon.ico" />
    <?php
    echo css_tag([
-      'public/assets/css/bootstrap.min.css',
-      'public/assets/css/icons.min.css',
-      'public/assets/css/app.min-default.css',
-      'public/assets/css/notification.css',
-      'public/assets/css/pace.min.css',
+      'assets/css/bootstrap.min.css',
+      'assets/css/icons.min.css',
+      'assets/css/app.min-default.css',
+      'assets/css/notification.css',
+      'assets/css/pace.min.css',
    ]);
    ?>
 </head>
@@ -21,10 +21,10 @@
    <div id="root"></div>
    <?php
    echo script_tag([
-      'public/assets/js/jquery.min.js',
-      'public/assets/js/bootstrap.bundle.min.js',
-      'public/assets/js/waves.min.js',
-      'public/assets/js/pace.min.js',
+      'assets/js/jquery.min.js',
+      'assets/js/bootstrap.bundle.min.js',
+      'assets/js/waves.min.js',
+      'assets/js/pace.min.js',
    ]);
    echo $webpack_js;
    echo '<script>window.Waves.init();</script>';
