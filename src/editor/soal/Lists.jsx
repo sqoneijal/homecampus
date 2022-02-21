@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { Breadcrumb, Col, Container, Row, Card, Table } from "react-bootstrap";
 import ReactNotification from "react-notifications-component";
-import ModalForms from "./ModalForms";
+import Forms from "./Forms";
 import ModalDetail from "./ModalDetail";
 
 let datatable;
@@ -57,7 +57,7 @@ const Lists = () => {
    return (
       <React.Fragment>
          <ReactNotification />
-         <ModalForms
+         <Forms
             openModalForms={openModalForms}
             setOpenModalForms={(e) => setOpenModalForms(e)}
             detailContent={detailContent}

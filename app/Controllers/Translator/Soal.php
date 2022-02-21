@@ -18,10 +18,7 @@ class Soal extends Translator {
    public function index() {
       $this->data = [
          'title' => 'Soal',
-         'internalCss' => [
-            $this->assets->summernote['css'],
-            $this->assets->datatable['css'],
-         ],
+         'internalCss' => $this->assets->datatable['css'],
          'internalJs' => [
             tinymce['js'],
             $this->assets->datatable['js'],

@@ -18,13 +18,10 @@ class Soal extends Editor {
    public function index() {
       $this->data = [
          'title' => 'Editor',
-         'internalCss' => [
-            $this->assets->datatable['css'],
-            $this->assets->summernote['css'],
-         ],
+         'internalCss' => $this->assets->datatable['css'],
          'internalJs' => [
             $this->assets->datatable['js'],
-            $this->assets->summernote['js'],
+            tinymce['js'],
          ],
       ];
 
@@ -83,7 +80,7 @@ class Soal extends Editor {
             'id_soal' => $data['id_soal'],
             'id_judul' => $data['id_judul'],
             'nama' => $data['nama'],
-            'content' => html_entity_decode($data['content']),
+            'content' => $data['content'],
             'id_tingkatan' => $data['id_tingkatan'],
             'id_bab' => $data['id_bab'],
             'sub_bab' => $data['sub_bab'],
