@@ -19,6 +19,7 @@
    "author": "sqone.developer@gmail.com",
    "license": "ISC",
    "dependencies": {
+      "@babel/runtime": "^7.17.2",
       "axios": "^0.21.1",
       "babel-loader": "^8.2.2",
       "decode-html": "^2.0.0",
@@ -27,6 +28,7 @@
    },
    "devDependencies": {
       "@babel/core": "^7.15.4",
+      "@babel/plugin-transform-runtime": "^7.17.0",
       "@babel/preset-env": "^7.15.4",
       "@babel/preset-react": "^7.14.5",
       "clean-webpack-plugin": "^4.0.0",

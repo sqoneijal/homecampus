@@ -14,6 +14,7 @@ const entry = {
       bab: "./src/admin/bab/Lists.jsx",
       judul: "./src/admin/judul/Lists.jsx",
       profile: "./src/admin/profile/Forms.jsx",
+      soal: "./src/admin/soal/Lists.jsx",
    },
    translator: {
       topbar: "./src/Topbar.jsx",

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Controllers\Editor;
+namespace App\Controllers\Admin;
 
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
-use App\Controllers\Editor;
-use App\Models\Editor\Soal as Model;
-use App\Validation\Editor\Soal as Validate;
+use App\Controllers\Admin as Controller;
+use App\Models\Admin\Soal as Model;
+use App\Validation\Admin\Soal as Validate;
 
-class Soal extends Editor {
+class Soal extends Controller {
 
    public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger) {
       parent::initController($request, $response, $logger);
@@ -18,14 +18,33 @@ class Soal extends Editor {
    public function index() {
       $this->data = [
          'title' => 'Soal',
-         'internalCss' => $this->assets->datatable['css'],
+         'internalCss' => datatable['css'],
          'internalJs' => [
-            $this->assets->datatable['js'],
+            datatable['js'],
             tinymce['js'],
          ],
       ];
 
       $this->template($this->data, 'soal');
+   }
+
+   public function hapus() {
+      $response = ['status' => false, 'errors' => [], 'msg_response' => 'OK'];
+      
+      $validation = new Validate();
+      if ($this->validate($validation->hapus())) {
+         $model = new Model();
+         $model->hapus($this->post);
+      
+         $response['status'] = true;
+         $response['msg_response'] = 'Data berhasil dihapus.';
+      } else {
+         $errors = \Config\Services::validation()->getErrors();
+         foreach ($errors as $key) {
+            $response['msg_response'] = $key;
+         }
+      }
+      return $this->response->setJSON($response);
    }
 
    public function submit() {
@@ -73,24 +92,12 @@ class Soal extends Editor {
          $i++;
    
          $action = '<div class="btn-group">';
-         $action .= '<a class="btn btn-sm btn-warning" href="#" id="edit"><i class="ri-edit-2-line"></i></a>';
+         $action .= '<a class="btn btn-sm btn-warning" href="#" id="edit" data-bs-original-title="Edit" data-bs-toggle="tooltip" data-bs-placement="top"><i class="ri-edit-2-line"></i></a>';
+         $action .= '<a class="btn btn-sm btn-danger" href="#" id="delete" data-bs-original-title="Delete" data-bs-toggle="tooltip" data-bs-placement="top"><i class="ri-delete-bin-line"></i></a>';
          $action .= '</div>';
-
-         $detailContent = [
-            'id_soal' => $data['id_soal'],
-            'id_judul' => $data['id_judul'],
-            'nama' => $data['nama'],
-            'content' => $data['content'],
-            'id_tingkatan' => $data['id_tingkatan'],
-            'id_bab' => $data['id_bab'],
-            'sub_bab' => $data['sub_bab'],
-            'bab' => $data['bab'],
-            'tingkatan' => $data['tingkatan'],
-            'is_publish' => $data['is_publish'],
-         ];
    
          $result = [];
-         $result['detailContent'] = $detailContent;
+         $result['detailContent'] = $data;
          $result[] = '<a href="#" id="nama">'.$data['nama'].'</a>';
          $result[] = $data['sub_bab'];
          $result[] = $data['bab'];

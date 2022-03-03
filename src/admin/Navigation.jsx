@@ -31,6 +31,13 @@ const nav_array = [
       sub: false,
    },
    {
+      label: "Soal",
+      icon: "ri-dashboard-line",
+      active: ["soal"],
+      url: "/admin/soal",
+      sub: false,
+   },
+   {
       label: "Pengguna",
       icon: "ri-dashboard-line",
       active: ["pengguna"],

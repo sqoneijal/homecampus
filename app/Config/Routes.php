@@ -112,6 +112,17 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
 
 		$routes->post('submit', 'Profile::submit');
 	});
+
+	$routes->group('soal', function($routes) {
+		$routes->get('/', 'Soal::index');
+		$routes->get('gettingkatan', 'Soal::getTingkatan');
+
+		$routes->post('getdata', 'Soal::getData');
+		$routes->post('getbab', 'Soal::getBAB');
+		$routes->post('getjudul', 'Soal::getJudul');
+		$routes->post('submit', 'Soal::submit');
+		$routes->post('hapus', 'Soal::hapus');
+	});
 });
 
 $routes->group('translator', ['namespace' => 'App\Controllers\Translator'], function($routes) {
