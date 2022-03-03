@@ -75,22 +75,9 @@ class Soal extends Editor {
          $action = '<div class="btn-group">';
          $action .= '<a class="btn btn-sm btn-warning" href="#" id="edit"><i class="ri-edit-2-line"></i></a>';
          $action .= '</div>';
-
-         $detailContent = [
-            'id_soal' => $data['id_soal'],
-            'id_judul' => $data['id_judul'],
-            'nama' => $data['nama'],
-            'content' => $data['content'],
-            'id_tingkatan' => $data['id_tingkatan'],
-            'id_bab' => $data['id_bab'],
-            'sub_bab' => $data['sub_bab'],
-            'bab' => $data['bab'],
-            'tingkatan' => $data['tingkatan'],
-            'is_publish' => $data['is_publish'],
-         ];
    
          $result = [];
-         $result['detailContent'] = $detailContent;
+         $result['detailContent'] = $data;
          $result[] = '<a href="#" id="nama">'.$data['nama'].'</a>';
          $result[] = $data['sub_bab'];
          $result[] = $data['bab'];

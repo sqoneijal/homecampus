@@ -14,6 +14,11 @@
  * @link: https://codeigniter4.github.io/CodeIgniter4/
  */
 
+define('app_version', [
+   'admin' => 'v1.0',
+   'editor' => 'v1.0',
+]);
+
 define('tinymce', [
    'js' => [
       'assets/plugins/tinymce_5.10.2/tinymce.min.js'

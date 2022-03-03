@@ -54,6 +54,15 @@ const ModalDetail = (props) => {
                               })()}
                            </td>
                         </tr>
+                        <tr>
+                           <td>Author</td>
+                           <td>:</td>
+                           <td>
+                              <a href={`mailto:${detailContent.user_email}?subject=${detailContent.nama}&body=Judul Soal : ${detailContent.nama}`}>
+                                 {detailContent.user_author}
+                              </a>
+                           </td>
+                        </tr>
                      </tbody>
                   </Table>
                </Col>

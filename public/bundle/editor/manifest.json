@@ -1,8 +1,8 @@
 {
-  "topbar.js": "autotopbar.f3d5ac805eeba34138cb.js",
-  "navigation.js": "autonavigation.f3d5ac805eeba34138cb.js",
-  "dashboard.js": "autodashboard.f3d5ac805eeba34138cb.js",
-  "soal.js": "autosoal.f3d5ac805eeba34138cb.js",
-  "vendor.js": "autovendor.f3d5ac805eeba34138cb.js",
+  "topbar.js": "autotopbar.d71475dbd2ce139ed090.js",
+  "navigation.js": "autonavigation.d71475dbd2ce139ed090.js",
+  "dashboard.js": "autodashboard.d71475dbd2ce139ed090.js",
+  "soal.js": "autosoal.d71475dbd2ce139ed090.js",
+  "vendor.js": "autovendor.d71475dbd2ce139ed090.js",
   "index.html": "autoindex.html"
 }
